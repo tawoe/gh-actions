@@ -2,7 +2,7 @@ name: Build second
 
 on:
   workflow_run:
-    workflows: ["Build first"]
+    workflows: [Build first]
     types:
       - completed
 
