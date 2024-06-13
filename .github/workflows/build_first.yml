@@ -1,4 +1,4 @@
-name: Build slow
+name: Build first
 
 on: [push]
 
@@ -10,8 +10,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Wait for 50 minutes
-        run: sleep 3000
-
       - name: create text file
         run: echo "fred was here" > fred.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: fred-file
+          path: fred.txt
