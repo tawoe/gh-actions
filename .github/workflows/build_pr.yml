@@ -13,5 +13,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: cat text file
-        run: cat do_not_merge.txt
+      - name: Get the username
+        run: echo "The username is ${{ github.event.pull_request.user.login }}"
