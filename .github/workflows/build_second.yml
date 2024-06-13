@@ -1,8 +1,8 @@
-name: Build second
+name: Build second after slow
 
 on:
   workflow_run:
-    workflows: [Build first]
+    workflows: [Build slow]
     types:
       - completed
 

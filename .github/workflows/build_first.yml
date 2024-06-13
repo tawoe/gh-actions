@@ -1,4 +1,4 @@
-name: Build first
+name: Build slow
 
 on: [push]
 
@@ -9,6 +9,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Wait for 50 minutes
+        run: sleep 3000
 
       - name: create text file
         run: echo "fred was here" > fred.txt
