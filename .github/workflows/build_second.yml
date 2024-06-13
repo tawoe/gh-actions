@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Wait for artifact
-        run: sleep 60
+        run: sleep 180
 
       - name: Download artifact
         uses: actions/download-artifact@v2
