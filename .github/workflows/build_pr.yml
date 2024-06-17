@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: echo this
+        run: echo 'this'
 
       - name: cat text file
         run: cat do_not_merge.txt
