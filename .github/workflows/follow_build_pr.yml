@@ -43,5 +43,5 @@ jobs:
           script: |
             var fs = require('fs');
             var issue_number = String(fs.readFileSync('./UN'));
-            echo "The issue number is $issue_number";
+            return "The issue number is $issue_number";
 
