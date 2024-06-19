@@ -43,7 +43,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             var fs = require('fs');
-            var issue_number = Number(fs.readFileSync('./UN'));
+            var issue_number = String(fs.readFileSync('./UN'));
             echo "The issue number is $issue_number";
             await github.issues.createComment({
               owner: context.repo.owner,
