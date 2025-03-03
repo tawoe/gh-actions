@@ -6,11 +6,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Extract branch name
+      - uses: actions/checkout@v4
+      - name: show git commit traditional
         shell: bash
-        run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >>$GITHUB_OUTPUT
-        id: extract_branch
-      - name: show branch name
+        run: echo $GITHUB_SHA
+      - name: show git commit
         shell: bash
-        run: echo $GITHUB_OUTPUT
+        run: echo ${{gihub.sha}}
