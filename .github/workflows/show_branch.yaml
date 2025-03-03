@@ -12,4 +12,4 @@ jobs:
         run: echo $GITHUB_SHA
       - name: show git commit
         shell: bash
-        run: echo ${{gihub.sha}}
+        run: echo ${{github.sha}}
