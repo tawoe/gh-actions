@@ -10,6 +10,8 @@ jobs:
       - name: show git commit traditional
         shell: bash
         run: echo $GITHUB_SHA
+      - name: 
+        run: exit 1
       - name: show git commit
         shell: bash
         run: echo ${{github.sha}}
