@@ -15,6 +15,7 @@ jobs:
       - name: show git commit
         shell: bash
         if: always()
+        if: vars.ENABLE_SPECIAL_STEP == 'true'
         run: echo ${{github.sha}}
       - name: show git commit again
         shell: bash
