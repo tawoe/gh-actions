@@ -14,4 +14,8 @@ jobs:
         run: exit 1
       - name: show git commit
         shell: bash
+        if: always()
+        run: echo ${{github.sha}}
+      - name: show git commit again
+        shell: bash
         run: echo ${{github.sha}}
