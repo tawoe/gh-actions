@@ -1,2 +1,2 @@
 # Playground for testing github actions
-test comment, yes.
+test comment
